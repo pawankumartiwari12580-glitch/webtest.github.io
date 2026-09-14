@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ready To Get Started - Amul</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background: #fff;
+        }
+
+        /* ==========================
+           CTA BANNER
+        ========================== */
+
+        .amul-cta {
+            position: relative;
+            width: 100%;
+            min-height: 90px;
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #003c7b 0%,
+                    #003879 55%,
+                    #002e68 100%
+                );
+
+            border-top: 2px solid #d7e8f5;
+            border-bottom: 2px solid #d7e8f5;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* ==========================
+           LEFT IMAGE
+        ========================== */
+
+        .amul-cta-left {
+            position: absolute;
+            left: 0;
+            top: 0;
+
+            width: 34%;
+            height: 100%;
+
+            overflow: hidden;
+
+            display: flex;
+            align-items: center;
+        }
+
+        .amul-cta-left img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: left center;
+
+            display: block;
+        }
+
+        /* Fade image into blue */
+        .amul-cta-left::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+
+            background: linear-gradient(
+                90deg,
+                rgba(0, 52, 112, 0) 30%,
+                rgba(0, 56, 119, 0.35) 65%,
+                #003879 100%
+            );
+        }
+
+        /* ==========================
+           CENTER CONTENT
+        ========================== */
+
+        .amul-cta-content {
+            position: relative;
+            z-index: 3;
+
+            width: 55%;
+            margin-left: 8%;
+
+            text-align: center;
+            color: #fff;
+        }
+
+        .amul-cta-content h2 {
+            font-size: 19px;
+            line-height: 23px;
+            font-weight: 800;
+            margin-bottom: 1px;
+        }
+
+        .amul-cta-content p {
+            font-size: 8px;
+            line-height: 11px;
+            font-weight: 400;
+
+            color: #e6f1ff;
+
+            margin: 0 auto 7px;
+            max-width: 430px;
+        }
+
+        /* ==========================
+           BUTTON
+        ========================== */
+
+        .amul-cta-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+
+            min-width: 96px;
+            height: 25px;
+
+            padding: 0 15px;
+
+            border-radius: 20px;
+
+            background: linear-gradient(
+                90deg,
+                #ff111c,
+                #ed0712
+            );
+
+            color: #fff;
+            text-decoration: none;
+
+            font-size: 8px;
+            font-weight: 700;
+
+            box-shadow:
+                0 4px 10px rgba(0, 0, 0, 0.18);
+
+            transition: all .25s ease;
+        }
+
+        .amul-cta-btn span {
+            font-size: 13px;
+            line-height: 1;
+        }
+
+        .amul-cta-btn:hover {
+            transform: translateY(-2px);
+            background: #ff1822;
+            box-shadow:
+                0 6px 14px rgba(0, 0, 0, 0.25);
+        }
+
+        /* ==========================
+           RIGHT LOGO
+        ========================== */
+
+        .amul-cta-logo {
+            position: absolute;
+            z-index: 4;
+
+            right: 5%;
+            top: 50%;
+
+            transform: translateY(-50%);
+
+            width: 100px;
+
+            text-align: center;
+        }
+
+        .amul-cta-logo img {
+            width: 100%;
+            max-height: 65px;
+            object-fit: contain;
+        }
+
+        .amul-logo-text {
+            color: #fff;
+            font-family: Georgia, serif;
+            font-size: 25px;
+            font-weight: 700;
+            line-height: 25px;
+        }
+
+        .amul-logo-subtitle {
+            color: #fff;
+            font-size: 7px;
+            margin-top: 1px;
+            font-family: Georgia, serif;
+        }
+
+        /* ==========================
+           TABLET
+        ========================== */
+
+        @media (max-width: 900px) {
+
+            .amul-cta {
+                min-height: 100px;
+            }
+
+            .amul-cta-left {
+                width: 32%;
+                opacity: .8;
+            }
+
+            .amul-cta-content {
+                width: 60%;
+                margin-left: 5%;
+            }
+
+            .amul-cta-content h2 {
+                font-size: 18px;
+            }
+
+            .amul-cta-content p {
+                font-size: 8px;
+            }
+
+            .amul-cta-logo {
+                right: 2%;
+                width: 80px;
+            }
+
+            .amul-logo-text {
+                font-size: 20px;
+            }
+        }
+
+        /* ==========================
+           MOBILE
+        ========================== */
+
+        @media (max-width: 600px) {
+
+            .amul-cta {
+                min-height: 170px;
+                padding: 20px 15px;
+            }
+
+            .amul-cta-left {
+                width: 100%;
+                opacity: .18;
+            }
+
+            .amul-cta-left::after {
+                background:
+                    linear-gradient(
+                        90deg,
+                        #003879,
+                        rgba(0, 56, 121, .85),
+                        #003879
+                    );
+            }
+
+            .amul-cta-content {
+                width: 100%;
+                margin: 0;
+                padding: 0 45px 0 5px;
+            }
+
+            .amul-cta-content h2 {
+                font-size: 17px;
+                line-height: 22px;
+            }
+
+            .amul-cta-content p {
+                font-size: 8px;
+                line-height: 12px;
+                max-width: 330px;
+                margin-bottom: 10px;
+            }
+
+            .amul-cta-btn {
+                height: 29px;
+                min-width: 105px;
+                font-size: 8px;
+            }
+
+            .amul-cta-logo {
+                right: 8px;
+                width: 60px;
+            }
+
+            .amul-logo-text {
+                font-size: 17px;
+                line-height: 18px;
+            }
+
+            .amul-logo-subtitle {
+                font-size: 5px;
+            }
+        }
+
+        /* ==========================
+           SMALL MOBILE
+        ========================== */
+
+        @media (max-width: 380px) {
+
+            .amul-cta {
+                min-height: 160px;
+            }
+
+            .amul-cta-content {
+                padding-right: 35px;
+            }
+
+            .amul-cta-content h2 {
+                font-size: 15px;
+            }
+
+            .amul-cta-content p {
+                font-size: 7px;
+            }
+
+            .amul-cta-logo {
+                width: 52px;
+            }
+
+            .amul-logo-text {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="amul-cta">
+
+        <!-- LEFT PRODUCT IMAGE -->
+        <div class="amul-cta-left">
+            <img
+                src="images/amul-products-banner.jpg"
+                alt="Amul Dairy Products"
+            >
+        </div>
+
+        <!-- CENTER CONTENT -->
+        <div class="amul-cta-content">
+
+            <h2>
+                Ready To Get Started
+            </h2>
+
+            <p>
+                It's time to earn handsome income monthly.<br>
+                Apply now for amul parlour franchise and distributorship.
+            </p>
+
+            <a href="registration.html" class="amul-cta-btn">
+                Apply Now
+                <span>→</span>
+            </a>
+
+        </div>
+
+        <!-- RIGHT LOGO -->
+        <div class="amul-cta-logo">
+
+            <!-- Use your official logo image here if available -->
+            <img
+                src="images/amul-logo-white.png"
+                alt="Amul - The Taste of India"
+            >
+
+            <!-- Fallback text -->
+            <!--
+            <div class="amul-logo-text">
+                Amul
+            </div>
+
+            <div class="amul-logo-subtitle">
+                The Taste of India
+            </div>
+            -->
+
+        </div>
+
+    </section>
+
+</body>
+</html>
